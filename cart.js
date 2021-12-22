@@ -15,23 +15,22 @@ items.addEventListener('click', e => { btnAumentarDisminuir(e) })
 
 // Traer productos
 const fetchData = async () => {
-    // const res = await fetch('http://api.tempel.ar/products');
-    const res = await fetch('http://localhost:5000/product');
+    const res = await fetch('http://api.tempel.ar/products');
+    // const res = await fetch('http://localhost:5000/products');
 
     const data = await res.json()
-    // console.log(data)
-    pintarCards(data)
+    console.log(data.result)
+    renderCards(data)
 }
 
 // Pintar productos
-const pintarCards = data => {
-    data.forEach(item => {
-        setTimeout(function() {}, 2000)
-        templateCard.querySelector("img").setAttribute("src", item.url)
-
+const renderCards = data => {
+    data.result.forEach(item => {
+        // setTimeout(function() {}, 10)
+        templateCard.querySelector("img").setAttribute("src", item.image)
         templateCard.querySelector('h5').textContent = item.name
         templateCard.querySelector('p').textContent = item.price
-        templateCard.querySelector('button').dataset.id = item.id
+        templateCard.querySelector('button').dataset.id = item.product_id
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     })
