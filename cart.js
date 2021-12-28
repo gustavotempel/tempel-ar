@@ -15,7 +15,7 @@ items.addEventListener('click', e => { btnAumentarDisminuir(e) })
 
 // Traer productos
 const fetchData = async () => {
-    const res = await fetch('http://api.tempel.ar/products');
+    const res = await fetch("https://api-tempel-ar.herokuapp.com/products");
     // const res = await fetch('http://localhost:5000/products');
 
     const data = await res.json()
