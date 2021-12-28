@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      amtrix:
+      matrix:
         node-version: [15.x]
 
     steps:
