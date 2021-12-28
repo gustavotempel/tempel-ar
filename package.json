@@ -1,4 +1,26 @@
 {
-    "name": "tempel-ar",
-    "homepage": "https://gustavotempel.github.io/tempel-ar"
+  "name": "tempel-ar",
+  "homepage": "https://gustavotempel.github.io/tempel-ar",
+  "version": "1.0.0",
+  "main": "cart.js",
+  "dependencies": {
+    "@jamesives/github-pages-deploy-action": "^4.1.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "scripts": {
+    "deploy": "develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavotempel/tempel-ar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavotempel/tempel-ar/issues"
+  },
+  "description": ""
 }
