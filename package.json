@@ -10,7 +10,7 @@
     "gh-pages": "^3.2.3"
   },
   "scripts": {
-    "deploy": "deployment -d ."
+    "deploy": "gh-pages -d develop"
   },
   "repository": {
     "type": "git",
